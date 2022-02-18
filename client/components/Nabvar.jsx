@@ -20,11 +20,11 @@ const Nabvar=()=> {
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
         <img src={logo} className="w-32 cursor-pointer" />
       </div>
-      <ul className="text-white md:flex hiddent list-none flex-row justify-content item-center flex-init">
+      <ul className="text-white md:flex hidden list-none flex-row justify-content item-center flex-initial">
         {["market", "exchange", "tutorials", "wallets"].map((item, index)=>(
           <NabvarItem key={item+index} title={item} />
   ))}
-        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hove:bg-[#2546bd]">
+        <li className="bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
           Login
         </li>
         
