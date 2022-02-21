@@ -5,7 +5,7 @@ import React from 'react'
 function App() {
   return (
     <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
+        <div className='gradient-bg-welcome'>
         <Nabvar/>
         <Welcome/>
       </div>
