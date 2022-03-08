@@ -1,4 +1,4 @@
-import { Nabvar, Welcome, Footer, Services, Transaccions} from './../components'
+import { Nabvar, Welcome, Footer, Services, Transaccions} from './components'
 
 import React from 'react'
 

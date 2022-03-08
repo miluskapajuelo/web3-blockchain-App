@@ -1,7 +1,9 @@
+import React, {useContext} from 'react'
 import {AiFillPlayCircle} from 'react-icons/ai'
 import {SiEthereum} from 'react-icons/si';
 import {BsInfoCircle} from 'react-icons/bs'
-
+// third step  import TransactionContext function 
+import { TransactionContext } from '../context/TransactionContext';
 import {Loader} from './'
 
 
@@ -16,6 +18,9 @@ const Input=({placeholder, name, type, value, handleChange})=>(
   className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"/>
 )
 const Welcome=()=> {
+  // sixth step, create a variable using useContext(inside the function), so the variable is called value
+  const {value} = useContext(TransactionContext)
+  console.log(value)
   const connectWallet =()=>{
   }
 
