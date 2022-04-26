@@ -1,17 +1,15 @@
-# DAPP for making secure transacctions in etherium network
+# DAPP for secure transactions on the etherium network
 
 ## Overview
 * This is a project guided by a [tutorial](https://www.youtube.com/watch?v=Wn_Kb3MR_cU&t=35s), made by cero.
 * This application connects our Metamask wallet to the application and allows us to make transfers of Ethers coins through the Etherium network, it also allows us to show the history of transfers.
 
 
-### Prerequisites
-* You need to create an account and get an API key in the MovieDatabase Api [Follow the link -> ](https://developers.themoviedb.org/3)
-
 ### Functionality
 
-* It allows the user to click on a specific Genre and the app fetches movies according to that Genre. 
-* Once the user clicks on a specific movie, the app will display information about the movie, from reviews to the cast. And according to the specific movie clicked the User will be able to see recommended movies that are similar to the clicked one. 
+* It allows the user to connect Metamask wallet
+* Make transactions using the platform by a friendly form
+* Check last transactions history
 
 
 ### Images
