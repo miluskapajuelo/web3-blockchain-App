@@ -3,6 +3,8 @@ import {ethers} from 'ethers';
 
 import {contractABI, contractAdress} from '../utils/constants';
 
+import MessageAlert from './../components/AlertMessage'
+
 //react context
 // first step to use useContext assign React.createContext() to a variable calls TransactionContext
 export const TransactionContext = React.createContext();
@@ -73,7 +75,11 @@ export const TransaccionProvider = ({children})=>{
             // open Metamask
             const accounts = await ethereum.request({method: 'eth_requestAccounts'});
 
-            console.log(accounts)
+
+            if(accounts){
+                setCurrentAccount(accounts[0])
+                alert('Wallet connected')
+            }
         }
         catch(error){
             console.log(error)
@@ -111,6 +117,7 @@ export const TransaccionProvider = ({children})=>{
                 await transactionHash.wait();
                 setIsLoading(false);
                 console.log(`Success ${transactionHash.hash}`);
+                MessageAlert('success')
 
                 const transactionsCount = await transactionContract.getTransactionCount();
                 // 2:58:45 
@@ -127,7 +134,7 @@ export const TransaccionProvider = ({children})=>{
     },[]);
 
     return (
-        <TransactionContext.Provider value={{connectWallet,currentAccount,formData, handleChange,sendTransaction}}>
+        <TransactionContext.Provider value={{connectWallet,currentAccount,formData, handleChange,sendTransaction,isLoading}}>
             {children}
         </TransactionContext.Provider>
     )
